@@ -12,14 +12,16 @@ class DeleteSubjectAction
 
         if (!$subject) {
             return response()->json([
-                "message" => "Subject not found!"
-            ]);
+                "message" => "Subject not found!",
+                "status" => 404
+            ], 404);
         }
 
         $subject->delete($id);
 
         return response()->json([
-            "message" => "$subject->name subject deleted successfully!"
+            "message" => "$subject->name subject deleted successfully!",
+            "status" => 200
         ]);
     }
 }

@@ -1,0 +1,80 @@
+:root {
+    --main-bg-color: #143d59;
+    --main-text-color: #f4b41a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 10px;
+    width: 100%;
+    padding-left: 300px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 30%;
+    transform: translateY(50%);
+    width: 200px;
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    display: flex;
+    flex-flow: column;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px;
+    gap: 0;
+}
+
+.sidebar > a {
+    padding: 8px;
+    border-radius: 3px;
+    transition: .2s all ease;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar > a:hover {
+    background: var(--main-text-color);
+    color: var(--main-bg-color);
+    transition: .2s all ease;
+}
+
+.title {
+    font-size: 1.3em;
+    color: #555;
+}
+
+section {
+    width: 80%;
+}
+
+.code-block {
+    font-size: 1.1em;
+    display: block;
+    background: #143d59;
+    color: #f4b41a;
+    border-radius: 7px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.json {
+    color: #f4b41a;
+    font-size: .9em;
+    font-weight: normal;
+}
